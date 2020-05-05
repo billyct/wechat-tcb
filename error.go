@@ -1,4 +1,4 @@
-package wechat_tcb
+package tcb
 
 import "fmt"
 
