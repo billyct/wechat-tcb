@@ -2,12 +2,12 @@ package tcb
 
 import "fmt"
 
-type TcbError struct {
+type Error struct {
 	Api     string
 	ErrCode int64
 	ErrMsg  string
 }
 
-func (t *TcbError) Error() string {
+func (t *Error) Error() string {
 	return fmt.Sprintf("api % error, errcode: %s, errmsg: %s", t.Api, t.ErrCode, t.ErrMsg)
 }

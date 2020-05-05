@@ -110,7 +110,7 @@ func (t *Tcb) checkError(name string, res map[string]interface{}) (error, bool) 
 		errCode := int64(code.(float64))
 
 		if errCode != 0 {
-			err := &TcbError{
+			err := &Error{
 				Api:     name,
 				ErrCode: errCode,
 				ErrMsg:  res["errmsg"].(string),
