@@ -10,17 +10,18 @@ go get -u github.com/yyiidev/wechat-tcb
 
 ## 使用
 
-设置环境变量
-```
-APP_ID=小程序的 app_id
-APP_SECRET=小程序的 app_secret
-```
-
 ```go
-t := tcb.New()
+t := tcb.New(&tcb.Config{
+    AppID: "",
+    AppSecret: "",
+    EnvID: "",
+    Cache: c
+})
+
 ...
 
-t.UploadFile(key, file)
+t.UploadFile(path)
+t.UploadFileWithFile(path, file)
 t.DatabaseCollectionAdd(collection)
 t.DatabaseAdd(query)
 ```
